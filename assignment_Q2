@@ -1,0 +1,25 @@
+#Q2) Create a list of student marks and perform the following operations on the list
+1. Find out the average marks from the list
+2. find out the number of student scoring more than average in the list
+3. Find the marks that maximum students scored in the list(marks of 20 student)
+#------------------------------------------------------------------------------------------
+
+marks=[78,88,95,65,38,98,80,58,77,78,92,76,75,74,88,67,51,45,54,60]
+avg_marks=sum(marks)/len(marks)
+print("Average Marks: ",avg_marks)
+count =0
+for i in marks:
+    if i>avg_marks:
+        count=count+1
+print("Number of students scoring more than Average: ",count)
+freq={}
+for i in marks:
+    if i in freq:
+        freq[i]+=1
+    else:
+        freq[i]=1
+max_freq=max(freq.values())
+print("Marks scored by maximum students: ")
+for key in freq:
+    if freq[key]==max_freq:
+        print(key,"Frequency= ",freq[key])

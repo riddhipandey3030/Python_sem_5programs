@@ -1,0 +1,46 @@
+#Create a tuple of 20 employee name.Perform the following operations on the tuple
+#1. Print each name and the frequency of the name in the list
+#2. Remove the duplicate items from the tuple and find the number of distinct name in the tuple 
+#3. Print the name of the employee having maximum frequency
+#4. Sort the tuple in alphabetical order and display
+#5. Input a specific employee name and find whether that anme exists in the tuple or not.
+#------------------------------------------------------------------------------------------------
+employees = ("Riya", "Amit", "Rahul", "Riya", "Neha","Amit", "Sohan", "Priya", "Rahul", "Anjali","Karan", "Sneha", "Riya", "Vikas", "Neha",
+    "Amit", "Pooja", "Rahul", "Rohan", "Amit")
+print("Employee Name : Frequency")
+for name in set(employees):
+    print(name, ":", employees.count(name))
+
+# 2. Remove duplicate names and print distinct names
+
+unique_names = tuple(set(employees))
+print("\nDistinct Employee Names:")
+print(unique_names)
+
+# 3. Print the employee having maximum frequency
+
+max_freq = 0
+emp_name = ""
+
+for name in set(employees):
+    if employees.count(name) > max_freq:
+        max_freq = employees.count(name)
+        emp_name = name
+
+print("\nEmployee with Maximum Frequency:")
+print(emp_name, "-", max_freq)
+
+# 4. Sort the tuple alphabetically
+
+sorted_names = tuple(sorted(employees))
+print("\nEmployees in Alphabetical Order:")
+print(sorted_names)
+
+# 5. Check whether a specific employee exists
+
+search = input("\nEnter employee name to search: ")
+
+if search in employees:
+    print(search, "exists in the tuple.")
+else:
+    print(search, "does not exist in the tuple.")

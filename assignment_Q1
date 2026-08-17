@@ -1,0 +1,22 @@
+#Q1) Write a python program to create a list of 10 students name.
+# Create another list which is having the marks of 10 students
+# Find out the name of the students scoring maximum and minimum marks.
+# Do not take any duplicate values in the list. Both lists are unsorted.
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+students = ["Amit", "Riya", "Sohan", "Priya", "Rahul", "Neha", "Karan", "Sneha", "Vikas", "Anjali"]
+marks = [78, 92, 65, 88, 74, 95, 81, 69, 56, 85]
+# Finding maximum and minimum marks
+max_marks = max(marks)
+min_marks = min(marks)
+
+# Finding the index of maximum and minimum marks
+max_index = marks.index(max_marks)
+min_index = marks.index(min_marks)
+# Displaying the result 
+print("Student Scoring Maximum Marks:")
+print("Name :", students[max_index])
+print("Marks:", max_marks)
+print("\nStudent Scoring Minimum Marks:")
+print("Name :", students[min_index])
+print("Marks:", min_marks)
